@@ -17,6 +17,10 @@ namespace fukuvHensu
             InitializeComponent();
         }
 
+
+        int vx, vy;
+        
+
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -24,8 +28,8 @@ namespace fukuvHensu
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            label1.Top += int.Parse(textBox1.Text);
-            label1.Left += int.Parse(textBox2.Text);
+            label1.Top = vx;
+            label1.Left = vy;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -35,26 +39,26 @@ namespace fukuvHensu
 
         private void button1_Click(object sender, EventArgs e)
         {
-            textBox1.Text = "-5";
-            textBox2.Text = "0";
+            label1.Top = vy;
+            label1.Left = vx;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            textBox1.Text = "5";
-            textBox2.Text = "0";
+            label1.Top = vy;
+            label1.Left = vx;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            textBox1.Text = "0";
-            textBox2.Text = "5";
+            label1.Top = vy;
+            label1.Left = vx;
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            textBox1.Text = "0";
-            textBox2.Text = "-5";
+            label1.Top = vy;
+            label1.Left = vx;
         }
     }
 }
